@@ -42,6 +42,23 @@ app.use(express.urlencoded({ extended: true }));
 // Custom middleware
 app.use(logger);
 
+// Root endpoint
+app.get('/', (req, res) => {
+  res.json({
+    message: 'Flex Living Reviews API',
+    version: '1.0.0',
+    status: 'Running',
+    timestamp: new Date().toISOString(),
+    endpoints: {
+      health: '/health',
+      reviews: '/api/reviews',
+      analytics: '/api/analytics',
+      google: '/api/google'
+    },
+    documentation: 'API is running successfully. Use the endpoints above to interact with the service.'
+  });
+});
+
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.json({
