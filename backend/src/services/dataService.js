@@ -1,4 +1,5 @@
 const Review = require('../models/Review');
+const fileStorage = require('./fileStorageService');
 
 class DataService {
   constructor() {
@@ -12,7 +13,23 @@ class DataService {
     if (this.initialized) return;
 
     console.log('🔄 Initializing data service...');
-    // In production, this would load existing reviews from database
+    
+    // Try to load existing reviews from file storage
+    try {
+      const storedReviews = await fileStorage.loadReviews();
+      if (storedReviews.length > 0) {
+        // Convert stored data back to Review instances
+        storedReviews.forEach(reviewData => {
+          // Create Review instance from stored data
+          const review = new Review(reviewData);
+          this.reviews.set(review.id, review);
+        });
+        console.log(`📂 Loaded ${storedReviews.length} reviews from file storage`);
+      }
+    } catch (error) {
+      console.error('❌ Error loading reviews from file storage:', error.message);
+    }
+    
     this.initialized = true;
     console.log('✅ Data service initialized');
   }
@@ -33,12 +50,18 @@ class DataService {
       }
     });
 
+    // Save to file storage for persistence
+    const allReviews = Array.from(this.reviews.values());
+    await fileStorage.saveReviews(allReviews);
+
     console.log(`💾 Saved ${reviews.length} reviews to storage`);
     return reviews;
   }
 
   clearReviews() {
     this.reviews.clear();
+    // Also clear file storage
+    fileStorage.clearReviews();
     console.log('🗑️ Cleared all reviews from storage');
   }
 

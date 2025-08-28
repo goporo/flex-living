@@ -165,6 +165,41 @@ const ReviewManagement: React.FC = () => {
     document.body.removeChild(link);
   };
 
+  const handleGenerateMockData = async () => {
+    try {
+      setLoading(true);
+      setError(null);
+
+      // Call the API to generate mock data
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/reviews/hostaway`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to generate mock data');
+      }
+
+      const result = await response.json();
+      
+      if (result.success) {
+        setReviews(result.data);
+        // Show success message briefly
+        setError("Mock data generated successfully!");
+        setTimeout(() => setError(null), 3000);
+      } else {
+        setError("Failed to generate mock data");
+      }
+    } catch (error) {
+      console.error("Error generating mock data:", error);
+      setError("Failed to generate mock data");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const openReviewModal = (review: Review) => {
     setSelectedReview(review);
     setShowModal(true);
@@ -340,6 +375,9 @@ const ReviewManagement: React.FC = () => {
             )}
             <button onClick={loadReviews} className="btn-primary">
               Refresh
+            </button>
+            <button onClick={handleGenerateMockData} className="btn-secondary">
+              Generate Mock Data
             </button>
             <button onClick={handleExportCSV} className="btn-ghost">
               Export CSV

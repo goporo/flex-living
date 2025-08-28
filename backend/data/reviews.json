@@ -1,0 +1,501 @@
+[
+  {
+    "id": "00aa4c85-cde6-4fc0-80a8-bfcecf0618c7",
+    "sourceId": "7453",
+    "source": "hostaway",
+    "propertyId": "2b-n1-a-29-shoreditch-heights",
+    "propertyName": "2B N1 A - 29 Shoreditch Heights",
+    "guestName": "Shane Finkelstein",
+    "reviewText": "Shane and family are wonderful! Would definitely host again :)",
+    "rating": {
+      "overall": 10,
+      "categories": {
+        "cleanliness": 10,
+        "communication": 10,
+        "respect_house_rules": 10
+      }
+    },
+    "submittedAt": "2020-08-21T15:45:14.000Z",
+    "status": "pending",
+    "isPublic": false,
+    "approvedBy": null,
+    "approvedAt": null,
+    "rejectedBy": null,
+    "rejectedAt": null,
+    "channel": "multiple",
+    "type": "guest-to-host",
+    "metadata": {
+      "responseRequired": false,
+      "flaggedForReview": false,
+      "priority": "low",
+      "tags": [],
+      "sourceData": {
+        "id": 7453,
+        "type": "guest-to-host",
+        "status": "published",
+        "rating": null,
+        "publicReview": "Shane and family are wonderful! Would definitely host again :)",
+        "reviewCategory": [
+          {
+            "category": "cleanliness",
+            "rating": 10
+          },
+          {
+            "category": "communication",
+            "rating": 10
+          },
+          {
+            "category": "respect_house_rules",
+            "rating": 10
+          }
+        ],
+        "submittedAt": "2020-08-21 22:45:14",
+        "guestName": "Shane Finkelstein",
+        "listingName": "2B N1 A - 29 Shoreditch Heights"
+      }
+    },
+    "createdAt": "2025-08-28T15:15:59.726Z",
+    "updatedAt": "2025-08-28T15:15:59.726Z"
+  },
+  {
+    "id": "1c13e9f3-dc24-41f0-9b90-584f47dd58ad",
+    "sourceId": "7454",
+    "source": "hostaway",
+    "propertyId": "1b-s2-c-15-camden-lock-apartments",
+    "propertyName": "1B S2 C - 15 Camden Lock Apartments",
+    "guestName": "Emily Rodriguez",
+    "reviewText": "Amazing property in a fantastic location. Everything was clean and exactly as described. The host was very responsive and helpful throughout our stay.",
+    "rating": {
+      "overall": 5,
+      "categories": {
+        "cleanliness": 5,
+        "communication": 5,
+        "location": 5,
+        "value": 4
+      }
+    },
+    "submittedAt": "2024-08-15T07:30:22.000Z",
+    "status": "approved",
+    "isPublic": true,
+    "approvedBy": "Manager",
+    "approvedAt": "2025-08-28T15:16:18.331Z",
+    "rejectedBy": null,
+    "rejectedAt": null,
+    "channel": "multiple",
+    "type": "guest-to-host",
+    "metadata": {
+      "responseRequired": false,
+      "flaggedForReview": false,
+      "priority": "low",
+      "tags": [],
+      "sourceData": {
+        "id": 7454,
+        "type": "guest-to-host",
+        "status": "published",
+        "rating": 5,
+        "publicReview": "Amazing property in a fantastic location. Everything was clean and exactly as described. The host was very responsive and helpful throughout our stay.",
+        "reviewCategory": [
+          {
+            "category": "cleanliness",
+            "rating": 5
+          },
+          {
+            "category": "communication",
+            "rating": 5
+          },
+          {
+            "category": "location",
+            "rating": 5
+          },
+          {
+            "category": "value",
+            "rating": 4
+          }
+        ],
+        "submittedAt": "2024-08-15 14:30:22",
+        "guestName": "Emily Rodriguez",
+        "listingName": "1B S2 C - 15 Camden Lock Apartments"
+      }
+    },
+    "createdAt": "2025-08-28T15:15:59.726Z",
+    "updatedAt": "2025-08-28T15:16:18.331Z"
+  },
+  {
+    "id": "f2ab5580-e346-414b-b45a-b1f0d373d6d3",
+    "sourceId": "7455",
+    "source": "hostaway",
+    "propertyId": "studio-e1-b-42-canary-wharf-tower",
+    "propertyName": "Studio E1 B - 42 Canary Wharf Tower",
+    "guestName": "Marcus Thompson",
+    "reviewText": "Great stay overall. The apartment was modern and well-equipped. Only minor issue was noise from the street in the early morning, but that's expected in central London.",
+    "rating": {
+      "overall": 4,
+      "categories": {
+        "cleanliness": 5,
+        "communication": 4,
+        "location": 5,
+        "value": 4
+      }
+    },
+    "submittedAt": "2024-08-10T02:15:33.000Z",
+    "status": "pending",
+    "isPublic": false,
+    "approvedBy": null,
+    "approvedAt": null,
+    "rejectedBy": null,
+    "rejectedAt": null,
+    "channel": "multiple",
+    "type": "guest-to-host",
+    "metadata": {
+      "responseRequired": false,
+      "flaggedForReview": false,
+      "priority": "low",
+      "tags": [],
+      "sourceData": {
+        "id": 7455,
+        "type": "guest-to-host",
+        "status": "published",
+        "rating": 4,
+        "publicReview": "Great stay overall. The apartment was modern and well-equipped. Only minor issue was noise from the street in the early morning, but that's expected in central London.",
+        "reviewCategory": [
+          {
+            "category": "cleanliness",
+            "rating": 5
+          },
+          {
+            "category": "communication",
+            "rating": 4
+          },
+          {
+            "category": "location",
+            "rating": 5
+          },
+          {
+            "category": "value",
+            "rating": 4
+          }
+        ],
+        "submittedAt": "2024-08-10 09:15:33",
+        "guestName": "Marcus Thompson",
+        "listingName": "Studio E1 B - 42 Canary Wharf Tower"
+      }
+    },
+    "createdAt": "2025-08-28T15:15:59.726Z",
+    "updatedAt": "2025-08-28T15:15:59.726Z"
+  },
+  {
+    "id": "19873525-e4b7-4574-b4e4-072ddf9d2b3e",
+    "sourceId": "7456",
+    "source": "hostaway",
+    "propertyId": "2b-n1-a-29-shoreditch-heights",
+    "propertyName": "2B N1 A - 29 Shoreditch Heights",
+    "guestName": "Sarah Chen",
+    "reviewText": "The location was perfect for our business trip, walking distance to everything we needed. However, the wifi was quite slow and the heating system was difficult to operate.",
+    "rating": {
+      "overall": 3,
+      "categories": {
+        "cleanliness": 4,
+        "communication": 3,
+        "location": 5,
+        "value": 3
+      }
+    },
+    "submittedAt": "2024-08-05T09:45:12.000Z",
+    "status": "pending",
+    "isPublic": false,
+    "approvedBy": null,
+    "approvedAt": null,
+    "rejectedBy": null,
+    "rejectedAt": null,
+    "channel": "multiple",
+    "type": "guest-to-host",
+    "metadata": {
+      "responseRequired": false,
+      "flaggedForReview": false,
+      "priority": "low",
+      "tags": [],
+      "sourceData": {
+        "id": 7456,
+        "type": "guest-to-host",
+        "status": "published",
+        "rating": 3,
+        "publicReview": "The location was perfect for our business trip, walking distance to everything we needed. However, the wifi was quite slow and the heating system was difficult to operate.",
+        "reviewCategory": [
+          {
+            "category": "cleanliness",
+            "rating": 4
+          },
+          {
+            "category": "communication",
+            "rating": 3
+          },
+          {
+            "category": "location",
+            "rating": 5
+          },
+          {
+            "category": "value",
+            "rating": 3
+          }
+        ],
+        "submittedAt": "2024-08-05 16:45:12",
+        "guestName": "Sarah Chen",
+        "listingName": "2B N1 A - 29 Shoreditch Heights"
+      }
+    },
+    "createdAt": "2025-08-28T15:15:59.726Z",
+    "updatedAt": "2025-08-28T15:15:59.726Z"
+  },
+  {
+    "id": "02381aca-5350-475a-90e9-12ad08a7a0dc",
+    "sourceId": "7457",
+    "source": "hostaway",
+    "propertyId": "3b-w1-d-8-kensington-gardens-mansion",
+    "propertyName": "3B W1 D - 8 Kensington Gardens Mansion",
+    "guestName": "David Park",
+    "reviewText": "Absolutely phenomenal experience! The property exceeded all expectations. Impeccably clean, beautifully designed, and the host went above and beyond to ensure our comfort. Will definitely book again!",
+    "rating": {
+      "overall": 5,
+      "categories": {
+        "cleanliness": 5,
+        "communication": 5,
+        "location": 5,
+        "value": 5
+      }
+    },
+    "submittedAt": "2024-08-20T04:20:45.000Z",
+    "status": "approved",
+    "isPublic": true,
+    "approvedBy": "Manager",
+    "approvedAt": "2025-08-28T15:16:17.124Z",
+    "rejectedBy": null,
+    "rejectedAt": null,
+    "channel": "multiple",
+    "type": "guest-to-host",
+    "metadata": {
+      "responseRequired": false,
+      "flaggedForReview": false,
+      "priority": "low",
+      "tags": [],
+      "sourceData": {
+        "id": 7457,
+        "type": "guest-to-host",
+        "status": "published",
+        "rating": 5,
+        "publicReview": "Absolutely phenomenal experience! The property exceeded all expectations. Impeccably clean, beautifully designed, and the host went above and beyond to ensure our comfort. Will definitely book again!",
+        "reviewCategory": [
+          {
+            "category": "cleanliness",
+            "rating": 5
+          },
+          {
+            "category": "communication",
+            "rating": 5
+          },
+          {
+            "category": "location",
+            "rating": 5
+          },
+          {
+            "category": "value",
+            "rating": 5
+          }
+        ],
+        "submittedAt": "2024-08-20 11:20:45",
+        "guestName": "David Park",
+        "listingName": "3B W1 D - 8 Kensington Gardens Mansion"
+      }
+    },
+    "createdAt": "2025-08-28T15:15:59.726Z",
+    "updatedAt": "2025-08-28T15:16:17.124Z"
+  },
+  {
+    "id": "ca3c4140-ba57-4894-8980-4a149811dfcd",
+    "sourceId": "7458",
+    "source": "hostaway",
+    "propertyId": "1b-s2-c-15-camden-lock-apartments",
+    "propertyName": "1B S2 C - 15 Camden Lock Apartments",
+    "guestName": "Jennifer Walsh",
+    "reviewText": "Unfortunately, our stay did not meet expectations. The property was not as clean as advertised and several amenities mentioned in the listing were not working. The host was slow to respond to our concerns.",
+    "rating": {
+      "overall": 2,
+      "categories": {
+        "cleanliness": 2,
+        "communication": 2,
+        "location": 4,
+        "value": 2
+      }
+    },
+    "submittedAt": "2024-07-28T06:35:18.000Z",
+    "status": "pending",
+    "isPublic": false,
+    "approvedBy": null,
+    "approvedAt": null,
+    "rejectedBy": null,
+    "rejectedAt": null,
+    "channel": "multiple",
+    "type": "guest-to-host",
+    "metadata": {
+      "responseRequired": false,
+      "flaggedForReview": false,
+      "priority": "low",
+      "tags": [],
+      "sourceData": {
+        "id": 7458,
+        "type": "guest-to-host",
+        "status": "published",
+        "rating": 2,
+        "publicReview": "Unfortunately, our stay did not meet expectations. The property was not as clean as advertised and several amenities mentioned in the listing were not working. The host was slow to respond to our concerns.",
+        "reviewCategory": [
+          {
+            "category": "cleanliness",
+            "rating": 2
+          },
+          {
+            "category": "communication",
+            "rating": 2
+          },
+          {
+            "category": "location",
+            "rating": 4
+          },
+          {
+            "category": "value",
+            "rating": 2
+          }
+        ],
+        "submittedAt": "2024-07-28 13:35:18",
+        "guestName": "Jennifer Walsh",
+        "listingName": "1B S2 C - 15 Camden Lock Apartments"
+      }
+    },
+    "createdAt": "2025-08-28T15:15:59.726Z",
+    "updatedAt": "2025-08-28T15:15:59.726Z"
+  },
+  {
+    "id": "d53ea137-54fb-4801-9241-8031c3cab0e3",
+    "sourceId": "7459",
+    "source": "hostaway",
+    "propertyId": "studio-e1-b-42-canary-wharf-tower",
+    "propertyName": "Studio E1 B - 42 Canary Wharf Tower",
+    "guestName": "Alessandro Rossi",
+    "reviewText": "Lovely property with great character. The exposed brick and high ceilings made it feel very special. Check-in was seamless and the location is unbeatable for exploring London.",
+    "rating": {
+      "overall": 4,
+      "categories": {
+        "cleanliness": 4,
+        "communication": 5,
+        "location": 5,
+        "value": 4
+      }
+    },
+    "submittedAt": "2024-08-12T12:22:56.000Z",
+    "status": "approved",
+    "isPublic": true,
+    "approvedBy": "Manager",
+    "approvedAt": "2025-08-28T15:16:34.203Z",
+    "rejectedBy": null,
+    "rejectedAt": null,
+    "channel": "multiple",
+    "type": "guest-to-host",
+    "metadata": {
+      "responseRequired": false,
+      "flaggedForReview": false,
+      "priority": "low",
+      "tags": [],
+      "sourceData": {
+        "id": 7459,
+        "type": "guest-to-host",
+        "status": "published",
+        "rating": 4,
+        "publicReview": "Lovely property with great character. The exposed brick and high ceilings made it feel very special. Check-in was seamless and the location is unbeatable for exploring London.",
+        "reviewCategory": [
+          {
+            "category": "cleanliness",
+            "rating": 4
+          },
+          {
+            "category": "communication",
+            "rating": 5
+          },
+          {
+            "category": "location",
+            "rating": 5
+          },
+          {
+            "category": "value",
+            "rating": 4
+          }
+        ],
+        "submittedAt": "2024-08-12 19:22:56",
+        "guestName": "Alessandro Rossi",
+        "listingName": "Studio E1 B - 42 Canary Wharf Tower"
+      }
+    },
+    "createdAt": "2025-08-28T15:15:59.726Z",
+    "updatedAt": "2025-08-28T15:16:34.203Z"
+  },
+  {
+    "id": "93f36d9b-4257-4dda-bbca-48a58057201f",
+    "sourceId": "7460",
+    "source": "hostaway",
+    "propertyId": "2b-n1-a-29-shoreditch-heights",
+    "propertyName": "2B N1 A - 29 Shoreditch Heights",
+    "guestName": "Priya Sharma",
+    "reviewText": "Perfect for our weekend getaway! The property was spotless, modern, and had everything we needed. Great local restaurants nearby and easy access to public transport.",
+    "rating": {
+      "overall": 5,
+      "categories": {
+        "cleanliness": 5,
+        "communication": 4,
+        "location": 5,
+        "value": 5
+      }
+    },
+    "submittedAt": "2024-08-18T01:45:30.000Z",
+    "status": "approved",
+    "isPublic": true,
+    "approvedBy": "Manager",
+    "approvedAt": "2025-08-28T15:16:17.770Z",
+    "rejectedBy": null,
+    "rejectedAt": null,
+    "channel": "multiple",
+    "type": "guest-to-host",
+    "metadata": {
+      "responseRequired": false,
+      "flaggedForReview": false,
+      "priority": "low",
+      "tags": [],
+      "sourceData": {
+        "id": 7460,
+        "type": "guest-to-host",
+        "status": "published",
+        "rating": 5,
+        "publicReview": "Perfect for our weekend getaway! The property was spotless, modern, and had everything we needed. Great local restaurants nearby and easy access to public transport.",
+        "reviewCategory": [
+          {
+            "category": "cleanliness",
+            "rating": 5
+          },
+          {
+            "category": "communication",
+            "rating": 4
+          },
+          {
+            "category": "location",
+            "rating": 5
+          },
+          {
+            "category": "value",
+            "rating": 5
+          }
+        ],
+        "submittedAt": "2024-08-18 08:45:30",
+        "guestName": "Priya Sharma",
+        "listingName": "2B N1 A - 29 Shoreditch Heights"
+      }
+    },
+    "createdAt": "2025-08-28T15:15:59.726Z",
+    "updatedAt": "2025-08-28T15:16:17.770Z"
+  }
+]
