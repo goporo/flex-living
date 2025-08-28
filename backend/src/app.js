@@ -14,7 +14,6 @@ const errorHandler = require('./middleware/errorHandler');
 const logger = require('./middleware/logger');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
 
 // Security middleware
 app.use(helmet());
@@ -30,7 +29,8 @@ app.use(limiter);
 
 // CORS configuration
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+  // Allow specific origin in production; allow all in dev unless overridden
+  origin: process.env.FRONTEND_URL || true,
   credentials: true,
 }));
 
@@ -66,11 +66,5 @@ app.use('*', (req, res) => {
 
 // Global error handler
 app.use(errorHandler);
-
-// Start server
-app.listen(PORT, () => {
-  console.log(`🚀 Flex Living Reviews API running on port ${PORT}`);
-  console.log(`📊 Environment: ${process.env.NODE_ENV}`);
-});
 
 module.exports = app;
