@@ -28,12 +28,11 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 
-// CORS configuration - Allow all origins
+// CORS configuration
 app.use(cors({
-  origin: true,
+  // Allow specific origin in production; allow all in dev unless overridden
+  origin: process.env.FRONTEND_URL || true,
   credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
 }));
 
 // Body parsing middleware
