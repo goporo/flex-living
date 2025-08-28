@@ -21,11 +21,25 @@ class DataService {
     await this.initialize();
 
     reviews.forEach(review => {
-      this.reviews.set(review.id, review);
+      // Check if review already exists by sourceId to prevent duplicates
+      const existingReview = Array.from(this.reviews.values()).find(
+        r => r.sourceId === review.sourceId && r.source === review.source
+      );
+
+      if (!existingReview) {
+        this.reviews.set(review.id, review);
+      } else {
+        console.log(`⚠️ Skipping duplicate review with sourceId: ${review.sourceId}`);
+      }
     });
 
     console.log(`💾 Saved ${reviews.length} reviews to storage`);
     return reviews;
+  }
+
+  clearReviews() {
+    this.reviews.clear();
+    console.log('🗑️ Cleared all reviews from storage');
   }
 
   async getReviews(filters = {}) {

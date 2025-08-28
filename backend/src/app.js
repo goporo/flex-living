@@ -8,6 +8,7 @@ require('dotenv').config();
 // Import routes
 const reviewRoutes = require('./routes/reviews');
 const analyticsRoutes = require('./routes/analytics');
+const googleRoutes = require('./routes/google');
 
 // Import middleware
 const errorHandler = require('./middleware/errorHandler');
@@ -54,6 +55,7 @@ app.get('/health', (req, res) => {
 // API routes
 app.use('/api/reviews', reviewRoutes);
 app.use('/api/analytics', analyticsRoutes);
+app.use('/api/google', googleRoutes);
 
 // 404 handler
 app.use('*', (req, res) => {

@@ -3,6 +3,23 @@ const dataService = require('../services/dataService');
 
 class ReviewsController {
 
+  // POST /api/reviews/clear - Clear all reviews (debug only)
+  async clearReviews(req, res, next) {
+    try {
+      console.log('🗑️ Clearing all reviews...');
+
+      dataService.clearReviews();
+
+      res.json({
+        success: true,
+        message: 'All reviews cleared',
+        timestamp: new Date().toISOString()
+      });
+    } catch (error) {
+      next(error);
+    }
+  }
+
   // GET /api/reviews/hostaway - Fetch and normalize reviews from Hostaway
   async fetchHostawayReviews(req, res, next) {
     try {

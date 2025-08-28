@@ -177,6 +177,29 @@ class Review {
       }
     });
   }
+
+  static fromGoogleData(googleReview, propertyId, propertyName) {
+    // Convert Google's Unix timestamp to ISO string
+    const submittedAt = new Date(googleReview.time * 1000).toISOString();
+
+    return new Review({
+      sourceId: `google_${googleReview.time}_${googleReview.author_name?.replace(/\s+/g, '_')}`,
+      source: 'google',
+      propertyId: propertyId,
+      propertyName: propertyName,
+      guestName: googleReview.author_name,
+      reviewText: googleReview.text,
+      rating: googleReview.rating,
+      submittedAt: submittedAt,
+      type: 'google-review',
+      status: 'approved', // Google reviews are already public
+      isPublic: true,
+      metadata: {
+        sourceData: googleReview,
+        relativeTime: googleReview.relative_time_description
+      }
+    });
+  }
 }
 
 module.exports = Review;

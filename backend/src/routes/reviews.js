@@ -6,6 +6,9 @@ const { validateQuery, validateBody, reviewsQuerySchema, reviewActionSchema, bul
 // GET /api/reviews/hostaway - Fetch and normalize reviews from Hostaway API
 router.get('/hostaway', reviewsController.fetchHostawayReviews);
 
+// POST /api/reviews/clear - Clear all reviews (debug only)
+router.post('/clear', reviewsController.clearReviews);
+
 // GET /api/reviews/stats - Get review statistics
 router.get('/stats', reviewsController.getStats);
 

@@ -9,6 +9,9 @@ import type {
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3002";
 
+console.log("🔧 API_BASE_URL:", API_BASE_URL);
+console.log("🔧 VITE_API_URL:", import.meta.env.VITE_API_URL);
+
 // Create axios instance
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -21,6 +24,10 @@ const api = axios.create({
 // Request interceptor
 api.interceptors.request.use(
   (config) => {
+    console.log(
+      "🚀 Making API request to:",
+      `${config.baseURL || ""}${config.url || ""}`
+    );
     // Add any auth tokens here if needed
     return config;
   },
@@ -56,13 +63,67 @@ export const reviewApi = {
     return response.data;
   },
 
+  // Get approved reviews for public property page
+  getApprovedReviews: async (propertyId: string): Promise<Review[]> => {
+    console.log(
+      "🚀 Making API request to:",
+      `${API_BASE_URL}/api/reviews/public/${propertyId}`
+    );
+    const response = await fetch(
+      `${API_BASE_URL}/api/reviews/public/${propertyId}`
+    );
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch approved reviews: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data.data || [];
+  },
+
+  // Google Reviews API
+  getGoogleReviews: async (): Promise<Review[]> => {
+    console.log("🚀 Making API request to:", `${API_BASE_URL}/api/google`);
+    const response = await fetch(`${API_BASE_URL}/api/google`);
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch Google reviews: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data.data || [];
+  },
+
+  // Get Google reviews for specific property
+  getGoogleReviewsForProperty: async (
+    propertyId: string
+  ): Promise<Review[]> => {
+    console.log(
+      "🚀 Making API request to:",
+      `${API_BASE_URL}/api/google/property/${propertyId}`
+    );
+    const response = await fetch(
+      `${API_BASE_URL}/api/google/property/${propertyId}`
+    );
+
+    if (!response.ok) {
+      throw new Error(
+        `Failed to fetch Google reviews for property: ${response.status}`
+      );
+    }
+
+    const data = await response.json();
+    return data.data || [];
+  },
+
   // Approve a review
   approveReview: async (
     reviewId: string,
     approvedBy: string
   ): Promise<ApiResponse<Review>> => {
     const response = await api.post(`/api/reviews/${reviewId}/approve`, {
-      approvedBy,
+      action: "approve",
+      actionBy: approvedBy,
     });
     return response.data;
   },
@@ -74,8 +135,9 @@ export const reviewApi = {
     rejectedBy: string
   ): Promise<ApiResponse<Review>> => {
     const response = await api.post(`/api/reviews/${reviewId}/reject`, {
+      action: "reject",
+      actionBy: rejectedBy,
       reason,
-      rejectedBy,
     });
     return response.data;
   },

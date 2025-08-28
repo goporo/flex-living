@@ -105,7 +105,7 @@ export interface ReviewFilters {
   search?: string;
   page?: number;
   limit?: number;
-  sortBy?: "date" | "rating" | "property";
+  sortBy?: "date" | "rating" | "property" | "status";
   sortOrder?: "asc" | "desc";
 }
 

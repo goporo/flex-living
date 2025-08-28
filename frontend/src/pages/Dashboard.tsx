@@ -1,6 +1,22 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { useReview } from "../contexts/ReviewContext";
 import type { PropertyPerformance } from "../types";
+
+// Helper function to convert property name to URL slug
+const getPropertySlug = (propertyName: string): string => {
+  const slugMap: Record<string, string> = {
+    "2B N1 A - 29 Shoreditch Heights": "2b-n1-a-29-shoreditch-heights",
+    "1B Central London Apartment": "1b-s2-c-15-camden-lock-apartments",
+    "3B W1 D - 8 Kensington Gardens Mansion":
+      "3b-w1-d-8-kensington-gardens-mansion",
+    "Studio E1 B - 42 Canary Wharf Tower": "studio-e1-b-42-canary-wharf-tower",
+  };
+  return (
+    slugMap[propertyName] ||
+    propertyName.toLowerCase().replace(/[^a-z0-9]+/g, "-")
+  );
+};
 
 // Mock data for development
 const mockPropertyData: PropertyPerformance[] = [
@@ -246,9 +262,17 @@ const Dashboard: React.FC = () => {
               className="border border-gray-200 rounded-lg p-4"
             >
               <div className="flex items-center justify-between mb-3">
-                <h4 className="font-medium text-gray-900">
-                  {property.propertyName}
-                </h4>
+                <div className="flex items-center space-x-3">
+                  <h4 className="font-medium text-gray-900">
+                    {property.propertyName}
+                  </h4>
+                  <Link
+                    to={`/property/${getPropertySlug(property.propertyName)}`}
+                    className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded hover:bg-blue-200 transition-colors"
+                  >
+                    View Property Page
+                  </Link>
+                </div>
                 <div className="flex items-center space-x-1">
                   <span className="text-sm font-medium text-gray-900">
                     {property.metrics.averageRating}
@@ -300,30 +324,30 @@ const Dashboard: React.FC = () => {
           Quick Actions
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <button className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+          <div className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
             <div className="text-left">
               <p className="font-medium text-gray-900">Sync Reviews</p>
               <p className="text-sm text-gray-500">
                 Fetch latest reviews from Hostaway
               </p>
             </div>
-          </button>
+          </div>
 
-          <button className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+          <div className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
             <div className="text-left">
               <p className="font-medium text-gray-900">Export Data</p>
               <p className="text-sm text-gray-500">Download reviews as CSV</p>
             </div>
-          </button>
+          </div>
 
-          <button className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+          <div className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
             <div className="text-left">
               <p className="font-medium text-gray-900">View Analytics</p>
               <p className="text-sm text-gray-500">
                 Detailed performance insights
               </p>
             </div>
-          </button>
+          </div>
         </div>
       </div>
     </div>
