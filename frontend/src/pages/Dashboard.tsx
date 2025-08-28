@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useReview } from "../contexts/ReviewContext";
-import { reviewApi } from "../services/api";
 import type { PropertyPerformance } from "../types";
 
 // Mock data for development
@@ -64,7 +63,7 @@ const mockPropertyData: PropertyPerformance[] = [
 ];
 
 const Dashboard: React.FC = () => {
-  const { loading, setLoading, setError, setReviews } = useReview();
+  const { loading, setLoading, setError } = useReview();
   const [properties, setProperties] = useState<PropertyPerformance[]>([]);
 
   useEffect(() => {
