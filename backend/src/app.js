@@ -29,10 +29,18 @@ const limiter = rateLimit({
 app.use(limiter);
 
 // CORS configuration
+const allowedOrigins = [
+  'https://flex-living-indol.vercel.app',
+  'http://localhost:3000',
+  'http://localhost:5173',
+  ...(process.env.FRONTEND_URL ? [process.env.FRONTEND_URL] : [])
+];
+
 app.use(cors({
-  // Allow specific origin in production; allow all in dev unless overridden
-  origin: process.env.FRONTEND_URL || true,
+  origin: process.env.NODE_ENV === 'production' ? allowedOrigins : true,
   credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
 }));
 
 // Body parsing middleware
