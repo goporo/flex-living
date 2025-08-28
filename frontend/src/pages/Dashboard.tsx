@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useReview } from "../contexts/ReviewContext";
-import { reviewApi, analyticsApi } from "../services/api";
+import { reviewApi } from "../services/api";
 import type { PropertyPerformance } from "../types";
 
 // Mock data for development
@@ -64,22 +64,22 @@ const mockPropertyData: PropertyPerformance[] = [
 ];
 
 const Dashboard: React.FC = () => {
-  const { reviews, loading, setLoading, setError, setReviews } = useReview();
+  const { loading, setLoading, setError, setReviews } = useReview();
   const [properties, setProperties] = useState<PropertyPerformance[]>([]);
 
   useEffect(() => {
+    console.log("Dashboard useEffect running - this should only appear once");
     const loadDashboardData = async () => {
       setLoading(true);
       try {
-        // Load reviews
-        const reviewsResponse = await reviewApi.getReviews({ limit: 10 });
-        if (reviewsResponse.success) {
-          setReviews(reviewsResponse.data);
-        }
+        // For now, skip the API call and use mock data directly
+        // const reviewsResponse = await reviewApi.getReviews({ limit: 10 });
+        // if (reviewsResponse.success) {
+        //   setReviews(reviewsResponse.data);
+        // }
 
-        // For now, use mock data for properties
+        // Use mock data for properties
         setProperties(mockPropertyData);
-
         setError(null);
       } catch (error) {
         console.error("Failed to load dashboard data:", error);
@@ -93,7 +93,7 @@ const Dashboard: React.FC = () => {
     };
 
     loadDashboardData();
-  }, [setLoading, setError, setReviews]);
+  }, []); // Empty dependency array to run only once
 
   if (loading) {
     return (

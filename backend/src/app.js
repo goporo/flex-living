@@ -71,7 +71,6 @@ app.use(errorHandler);
 app.listen(PORT, () => {
   console.log(`🚀 Flex Living Reviews API running on port ${PORT}`);
   console.log(`📊 Environment: ${process.env.NODE_ENV}`);
-  console.log(`🔗 Frontend URL: ${process.env.FRONTEND_URL}`);
 });
 
 module.exports = app;

@@ -19,30 +19,52 @@ body {
 
 /* Dashboard specific styles */
 .dashboard-card {
-  @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem;
 }
 
 .review-card {
-  @apply bg-white rounded-lg shadow-sm border border-gray-200 p-4 hover:shadow-md transition-shadow;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+  padding: 1rem;
+  transition: box-shadow 0.2s;
+}
+
+.review-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .filter-panel {
-  @apply bg-white rounded-lg shadow-sm border border-gray-200 p-4;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+  padding: 1rem;
 }
 
 /* Rating stars */
 .star-rating {
-  @apply flex items-center space-x-1;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 .star {
-  @apply w-4 h-4 text-yellow-400;
+  width: 1rem;
+  height: 1rem;
+  color: #fbbf24;
 }
 
 .star.filled {
-  @apply text-yellow-400;
+  color: #fbbf24;
 }
 
 .star.empty {
-  @apply text-gray-300;
+  color: #d1d5db;
 }

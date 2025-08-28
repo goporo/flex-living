@@ -1,4 +1,9 @@
-import React, { createContext, useContext, useReducer } from "react";
+import React, {
+  createContext,
+  useContext,
+  useReducer,
+  useCallback,
+} from "react";
 import type { ReactNode } from "react";
 import type {
   ReviewContextType,
@@ -140,45 +145,45 @@ interface ReviewProviderProps {
 export const ReviewProvider: React.FC<ReviewProviderProps> = ({ children }) => {
   const [state, dispatch] = useReducer(reviewReducer, initialState);
 
-  const setReviews = (reviews: Review[]) => {
+  const setReviews = useCallback((reviews: Review[]) => {
     dispatch({ type: "SET_REVIEWS", payload: reviews });
-  };
+  }, []);
 
-  const setFilters = (filters: ReviewFilters) => {
+  const setFilters = useCallback((filters: ReviewFilters) => {
     dispatch({ type: "SET_FILTERS", payload: filters });
-  };
+  }, []);
 
-  const setLoading = (loading: boolean) => {
+  const setLoading = useCallback((loading: boolean) => {
     dispatch({ type: "SET_LOADING", payload: loading });
-  };
+  }, []);
 
-  const setError = (error: string | null) => {
+  const setError = useCallback((error: string | null) => {
     dispatch({ type: "SET_ERROR", payload: error });
-  };
+  }, []);
 
-  const approveReview = (reviewId: string) => {
+  const approveReview = useCallback((reviewId: string) => {
     dispatch({ type: "APPROVE_REVIEW", payload: reviewId });
-  };
+  }, []);
 
-  const rejectReview = (reviewId: string) => {
+  const rejectReview = useCallback((reviewId: string) => {
     dispatch({ type: "REJECT_REVIEW", payload: reviewId });
-  };
+  }, []);
 
-  const bulkApprove = (reviewIds: string[]) => {
+  const bulkApprove = useCallback((reviewIds: string[]) => {
     dispatch({ type: "BULK_APPROVE", payload: reviewIds });
-  };
+  }, []);
 
-  const bulkReject = (reviewIds: string[]) => {
+  const bulkReject = useCallback((reviewIds: string[]) => {
     dispatch({ type: "BULK_REJECT", payload: reviewIds });
-  };
+  }, []);
 
-  const toggleSelectReview = (reviewId: string) => {
+  const toggleSelectReview = useCallback((reviewId: string) => {
     dispatch({ type: "TOGGLE_SELECT_REVIEW", payload: reviewId });
-  };
+  }, []);
 
-  const clearSelection = () => {
+  const clearSelection = useCallback(() => {
     dispatch({ type: "CLEAR_SELECTION" });
-  };
+  }, []);
 
   const value: ReviewContextType = {
     ...state,
